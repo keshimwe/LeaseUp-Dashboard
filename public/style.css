@@ -1,0 +1,55 @@
+* {
+     box-sizing: border-box;
+}
+
+body{
+
+ background-color: rgb(255, 253, 253);
+}
+header{
+
+}
+
+main{
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.searchbar{
+     border: 1px solid rgb(199, 196, 196);
+     text-align: center;
+     padding: 5px;
+}
+
+
+
+
+.unitstatus{
+    display: flex;
+   
+    
+}
+
+.all, .leased, .vacant, .notice {
+    flex: 1;
+    text-align: center;
+    border: 1px solid rgb(199, 196, 196);
+    padding: 8px;
+}
+
+.dashboard{
+    display: flex;
+   border: 1px solid rgb(199, 196, 196);
+   
+}
+
+.unit, .status, .edit {
+    flex: 1;
+    text-align: center;
+     
+}

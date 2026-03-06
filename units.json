@@ -1,0 +1,214 @@
+ [
+    { 
+        "id": 1,
+        "unitNumber": 101,
+        "status": "Notice",
+        "floorPlan": "2x2",
+        "sf": 980,
+        "rent": 1200,
+        "LeaseStart": "05-01-2025" ,
+        "LeaseEnd": "05-01-2026",
+        "notes": "",
+        "resident": "Meg Griffen",
+        "applicants": []       
+    },
+
+     { 
+        "id": 2,
+        "unitNumber": 102,
+        "status": "Vacant",
+        "floorPlan": "2x2",
+        "sf": 980,
+        "rent": 1200,
+        "LeaseStart": "" ,
+        "LeaseEnd": "",
+        "notes": "",
+        "resident": "",
+        "applicants": []       
+    },
+
+    { 
+        "id": 3,
+        "unitNumber": 103,
+        "status": "Vacant",
+        "floorPlan": "2x2",
+        "sf": 980,
+        "rent": 1200,
+        "LeaseStart": "" ,
+        "LeaseEnd": "",
+        "notes": "",
+        "resident": "",
+        "applicants": []       
+    },
+
+    { 
+        "id": 4,
+        "unitNumber": 104,
+        "status": "Leased",
+        "floorPlan": "2x2",
+        "sf": 980,
+        "rent": 1200,
+        "LeaseStart": "03-01-2026" ,
+        "LeaseEnd": "03-01-2027",
+        "notes": "",
+        "resident": "Aubrey Grahams",
+        "applicants": []       
+    },
+
+
+     { 
+        "id": 5,
+        "unitNumber": 105,
+        "status": "Leased",
+        "floorPlan": "2x2",
+        "sf": 980,
+        "rent": 1200,
+        "LeaseStart": "02-01-2026" ,
+        "LeaseEnd": "02-01-2027",
+        "notes": "",
+        "resident": "Willow Smith",
+        "applicants": []       
+    },
+
+     { 
+        "id": 6,
+        "unitNumber": 106,
+        "status": "Notice",
+        "floorPlan": "2x2",
+        "sf": 980,
+        "rent": 1200,
+        "LeaseStart": "04-31-2025" ,
+        "LeaseEnd": "04-31-2026",
+        "notes": "",
+        "resident": "Fat Albert",
+        "applicants": []       
+    },
+
+     { 
+        "id": 7,
+        "unitNumber": 107,
+        "status": "Vacant",
+        "floorPlan": "1x1",
+        "sf": 780,
+        "rent": 1095,
+        "LeaseStart": "" ,
+        "LeaseEnd": "",
+        "notes": "",
+        "resident": "",
+        "applicants": []       
+    },
+
+     { 
+        "id": 8,
+        "unitNumber": 108,
+        "status": "Vacant",
+        "floorPlan": "1x1",
+        "sf": 780,
+        "rent": 1095,
+        "LeaseStart": "" ,
+        "LeaseEnd": "",
+        "notes": "",
+        "resident": "",
+        "applicants": []       
+    },
+
+     { 
+        "id": 9,
+        "unitNumber": 109,
+        "status": "Leased",
+        "floorPlan": "1x1",
+        "sf": 780,
+        "rent": 1095,
+        "LeaseStart": "10-01-2025" ,
+        "LeaseEnd": "10-01-2026",
+        "notes": "",
+        "resident": "Patrick Star",
+        "applicants": []       
+    },
+
+     { 
+        "id": 10,
+        "unitNumber": 110,
+        "status": "Notice",
+        "floorPlan": "1x1",
+        "sf": 780,
+        "rent": 1095,
+        "LeaseStart": "05-01-2025" ,
+        "LeaseEnd": "05-01-2026",
+        "notes": "",
+        "resident": "",
+        "applicants": []       
+    },
+
+     { 
+        "id": 11,
+        "unitNumber": 111,
+        "status": "Leased",
+        "floorPlan": "3x2",
+        "sf": 1080,
+        "rent": 1575,
+        "LeaseStart": "12-01-2025" ,
+        "LeaseEnd": "12-01-2026",
+        "notes": "",
+        "resident": "Sandy Cheeks",
+        "applicants": []       
+    },
+
+     { 
+        "id": 12,
+        "unitNumber": 112,
+        "status": "Vacant",
+        "floorPlan": "3x2",
+        "sf": 1080,
+        "rent": 1575,
+        "LeaseStart": "" ,
+        "LeaseEnd": "",
+        "notes": "",
+        "resident": "",
+        "applicants": []       
+    },
+
+     { 
+        "id": 13,
+        "unitNumber": 113,
+        "status": "Leased",
+        "floorPlan": "3x2",
+        "sf": 1080,
+        "rent": 1575,
+        "LeaseStart": "03-01-2026" ,
+        "LeaseEnd": "03-01-2027",
+        "notes": "",
+        "resident": "Lisa Simpson",
+        "applicants": []       
+    },
+
+     { 
+        "id": 14,
+        "unitNumber": 114,
+        "status": "Vacant",
+        "floorPlan": "3x2",
+        "sf": 1080,
+        "rent": 1575,
+        "LeaseStart": "" ,
+        "LeaseEnd": "",
+        "notes": "",
+        "resident": "",
+        "applicants": []       
+    },
+
+     { 
+        "id": 15,
+        "unitNumber": 115,
+        "status": "Notice",
+        "floorPlan": "3x2",
+        "sf": 1080,
+        "rent": 1575,
+        "LeaseStart": "05-31-2025" ,
+        "LeaseEnd": "05-31-2026",
+        "notes": "",
+        "resident": "Johnny Bravo",
+        "applicants": []       
+    }
+
+
+]

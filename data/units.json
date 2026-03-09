@@ -6,8 +6,8 @@
         "floorPlan": "2x2",
         "sf": 980,
         "rent": 1200,
-        "LeaseStart": "05-01-2025" ,
-        "LeaseEnd": "05-01-2026",
+        "leaseStart": "05-01-2025" ,
+        "leaseEnd": "05-01-2026",
         "notes": "",
         "resident": "Meg Griffen",
         "applicants": []       
@@ -20,11 +20,16 @@
         "floorPlan": "2x2",
         "sf": 980,
         "rent": 1200,
-        "LeaseStart": "" ,
-        "LeaseEnd": "",
+        "leaseStart": "" ,
+        "leaseEnd": "",
         "notes": "",
         "resident": "",
-        "applicants": []       
+        "applicants": [
+            {
+                "name": "Penny Proud",
+                "status": "Screening"
+            }
+        ]       
     },
 
     { 
@@ -34,8 +39,8 @@
         "floorPlan": "2x2",
         "sf": 980,
         "rent": 1200,
-        "LeaseStart": "" ,
-        "LeaseEnd": "",
+        "leaseStart": "" ,
+        "leaseEnd": "",
         "notes": "",
         "resident": "",
         "applicants": []       
@@ -48,8 +53,8 @@
         "floorPlan": "2x2",
         "sf": 980,
         "rent": 1200,
-        "LeaseStart": "03-01-2026" ,
-        "LeaseEnd": "03-01-2027",
+        "leaseStart": "03-01-2026" ,
+        "leaseEnd": "03-01-2027",
         "notes": "",
         "resident": "Aubrey Grahams",
         "applicants": []       
@@ -63,8 +68,8 @@
         "floorPlan": "2x2",
         "sf": 980,
         "rent": 1200,
-        "LeaseStart": "02-01-2026" ,
-        "LeaseEnd": "02-01-2027",
+        "leaseStart": "02-01-2026" ,
+        "leaseEnd": "02-01-2027",
         "notes": "",
         "resident": "Willow Smith",
         "applicants": []       
@@ -77,11 +82,16 @@
         "floorPlan": "2x2",
         "sf": 980,
         "rent": 1200,
-        "LeaseStart": "04-31-2025" ,
-        "LeaseEnd": "04-31-2026",
+        "leaseStart": "04-31-2025" ,
+        "leaseEnd": "04-31-2026",
         "notes": "",
         "resident": "Fat Albert",
-        "applicants": []       
+        "applicants": [
+            {
+                "name": "Jackie Chan",
+                "status": "Screening"
+            }
+        ]       
     },
 
      { 
@@ -91,11 +101,16 @@
         "floorPlan": "1x1",
         "sf": 780,
         "rent": 1095,
-        "LeaseStart": "" ,
-        "LeaseEnd": "",
+        "leaseStart": "" ,
+        "leaseEnd": "",
         "notes": "",
         "resident": "",
-        "applicants": []       
+        "applicants": [
+            {
+                "name": "Tommy Pickles",
+                "status": "Screening"
+            }
+        ]       
     },
 
      { 
@@ -105,11 +120,16 @@
         "floorPlan": "1x1",
         "sf": 780,
         "rent": 1095,
-        "LeaseStart": "" ,
-        "LeaseEnd": "",
+        "leaseStart": "" ,
+        "leaseEnd": "",
         "notes": "",
         "resident": "",
-        "applicants": []       
+        "applicants": [
+            {
+                "name": "Kim Possible",
+                "status": "Screening"
+            }
+        ]       
     },
 
      { 
@@ -119,8 +139,8 @@
         "floorPlan": "1x1",
         "sf": 780,
         "rent": 1095,
-        "LeaseStart": "10-01-2025" ,
-        "LeaseEnd": "10-01-2026",
+        "leaseStart": "10-01-2025" ,
+        "leaseEnd": "10-01-2026",
         "notes": "",
         "resident": "Patrick Star",
         "applicants": []       
@@ -133,8 +153,8 @@
         "floorPlan": "1x1",
         "sf": 780,
         "rent": 1095,
-        "LeaseStart": "05-01-2025" ,
-        "LeaseEnd": "05-01-2026",
+        "leaseStart": "05-01-2025" ,
+        "leaseEnd": "05-01-2026",
         "notes": "",
         "resident": "",
         "applicants": []       
@@ -147,8 +167,8 @@
         "floorPlan": "3x2",
         "sf": 1080,
         "rent": 1575,
-        "LeaseStart": "12-01-2025" ,
-        "LeaseEnd": "12-01-2026",
+        "leaseStart": "12-01-2025" ,
+        "leaseEnd": "12-01-2026",
         "notes": "",
         "resident": "Sandy Cheeks",
         "applicants": []       
@@ -161,11 +181,16 @@
         "floorPlan": "3x2",
         "sf": 1080,
         "rent": 1575,
-        "LeaseStart": "" ,
-        "LeaseEnd": "",
+        "leaseStart": "" ,
+        "leaseEnd": "",
         "notes": "",
         "resident": "",
-        "applicants": []       
+        "applicants": [
+            {
+                "name": "Bugs Bunny",
+                "status": "Screening"
+            }
+        ]       
     },
 
      { 
@@ -175,8 +200,8 @@
         "floorPlan": "3x2",
         "sf": 1080,
         "rent": 1575,
-        "LeaseStart": "03-01-2026" ,
-        "LeaseEnd": "03-01-2027",
+        "leaseStart": "03-01-2026" ,
+        "leaseEnd": "03-01-2027",
         "notes": "",
         "resident": "Lisa Simpson",
         "applicants": []       
@@ -189,11 +214,16 @@
         "floorPlan": "3x2",
         "sf": 1080,
         "rent": 1575,
-        "LeaseStart": "" ,
-        "LeaseEnd": "",
+        "leaseStart": "" ,
+        "leaseEnd": "",
         "notes": "",
         "resident": "",
-        "applicants": []       
+        "applicants": [
+            {
+                "name": "Kevin Hart",
+                "status": "Screening"
+            }
+        ]       
     },
 
      { 
@@ -203,8 +233,8 @@
         "floorPlan": "3x2",
         "sf": 1080,
         "rent": 1575,
-        "LeaseStart": "05-31-2025" ,
-        "LeaseEnd": "05-31-2026",
+        "leaseStart": "05-31-2025" ,
+        "leaseEnd": "05-31-2026",
         "notes": "",
         "resident": "Johnny Bravo",
         "applicants": []       

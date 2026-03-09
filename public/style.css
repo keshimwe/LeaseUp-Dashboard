@@ -2,9 +2,9 @@
      box-sizing: border-box;
 }
 
-body{
+/*body{
 
- background-color: rgb(255, 253, 253);
+ 
 }
 header{
 
@@ -12,7 +12,7 @@ header{
 
 main{
 
-}
+}*/
 
 .container{
     display: flex;
@@ -28,21 +28,23 @@ main{
 
 
 
-
+/*unit status buttons all leased vacant notice*/
 .unitstatus{
-    display: flex;
-   
-    
+    display: flex;   
 }
 
-.all, .leased, .vacant, .notice {
+.button {
     flex: 1;
     text-align: center;
-    border: 1px solid rgb(199, 196, 196);
+    /*background: #eee;*/
     padding: 8px;
+    /*cursor: pointer;*/
 }
 
-.dashboard{
+
+
+/* Dashboard header unit status edit section*/
+.dashboard-header{
     display: flex;
    border: 1px solid rgb(199, 196, 196);
    
@@ -52,4 +54,25 @@ main{
     flex: 1;
     text-align: center;
      
+}
+
+
+
+/*dashboard actual dashboard section*/
+#unit-dashboard{
+    display: flex;
+    flex-direction: column;
+
+   padding: 8px;
+   border: 1px solid rgb(199, 196, 196);
+}
+
+.unit-dashboard {
+ display: flex; 
+ 
+}
+
+.unit-dashboard p, .edit-button{
+    flex: 1;
+    text-align: center;
 }

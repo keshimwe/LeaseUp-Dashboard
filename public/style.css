@@ -67,12 +67,13 @@ main{
    border: 1px solid rgb(199, 196, 196);
 }
 
-.unit-dashboard {
+.unit-row {
  display: flex; 
  
 }
 
-.unit-dashboard p, .edit-button{
+.unit-row p{
     flex: 1;
     text-align: center;
+    
 }

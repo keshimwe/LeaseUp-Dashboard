@@ -25,10 +25,10 @@ const dashboardElement = document.getElementById("unit-dashboard")
  function displayUnits(unitList) {
  dashboardElement.innerHTML = "";
    unitList.forEach(unit => {
-dashboardElement.innerHTML += `<div class="unit-row"> 
-<p>${unit.unitNumber}</p>
-<p>${unit.status}</p>
-<p><a href="/units.html?id=${unit.id}"> View/Edit </a> </p> </div>`
+dashboardElement.innerHTML += `<tr class="unit-row"> 
+<td>${unit.unitNumber}</td>
+<td>${unit.status}</td>
+<td><a href="/units.html?id=${unit.id}"> View/Edit </a> </td> </tr>`
 });
  }
   

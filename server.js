@@ -14,9 +14,18 @@ app.use(express.urlencoded({extended: false}));
 
 const port = 5050;
 app.get(`/api/units`, (req, res) => {
-   
     res.json(units);
 });
+
+app.get("/api/units/:id", (req, res) =>{
+    const id = parseInt(req.params.id)
+    const unit = units.find(unit => unit.id === id)
+
+    if (!unit) {
+        return res.status(404).json({message: "Unit not found"})
+    }
+    res.json(unit)
+})
 
 app.listen(port, () => {
     console.log(`Server is running http://localhost:${port}`);

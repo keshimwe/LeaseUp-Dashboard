@@ -30,7 +30,42 @@ async function getDetails() {
        <p>Lease Start: ${unit.leaseStart}</p>
        <p>Lease End:   ${unit.leaseEnd}</p>
        `
-       
+    }
 
-        
+
+    let notes = {}
+    const notesArea = document.getElementById("note-input")
+     console.log(notesArea.value,"hey")
+
+    const noteButton = document.getElementById("note-submit")
+    noteButton.addEventListener("click", function() {
+       const comment = notesArea.value
+      if (!notes[id]) {
+        notes[id] = []
       }
+       notes[id].push(comment)
+
+       localStorage.setItem("notes", JSON.stringify(notes))
+       
+       displayNotes()
+       notesArea.value = ""   
+    })
+
+    function displayNotes(){
+        const savedNotes = document.getElementById("notes-saved")
+        savedNotes.innerHTML = ""
+      const unitNotes = notes[id] || []
+        unitNotes.forEach(notes =>{
+            savedNotes.innerHTML += 
+            ` <p>${notes}</p>`
+
+        })
+    }
+
+    const savedNotes = localStorage.getItem("notes")
+       if ( savedNotes) {
+        notes = JSON.parse(savedNotes)
+        
+       }
+
+    displayNotes()

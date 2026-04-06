@@ -29,7 +29,7 @@ async function getDetails() {
        <p>Floor: ${unit.floorPlan} </p>
        <p>SF:    ${unit.sf}</p>
        <p>Rent:  ${unit.rent}</p>
-       <h3>Occupancy Detail</h3>
+       <h3>Occupancy Summary</h3>
        <p>Status: ${unit.status}</p>
        <p>Resident: ${unit.resident}</p>
        <p>Lease Start: ${unit.leaseStart}</p>
@@ -78,35 +78,79 @@ async function getDetails() {
        }
     displayNotes()
 
-     const appList = document.getElementById("applicant-list")
-     
-  
-    function displayApplicants(unit) {
-      appList.innerHTML = ""
+    
+    function displayApplicants(details) {
+        const appList = document.getElementById("applicant-list")
+        appList.innerHTML = ""
 
-      if (!unit.applicants || unit.applicants.length === 0) {
-        appList.innerHTML += `<p>No applicants</p>`
-        
-      } else {
-        unit.applicants.forEach(app => {
+      if (!details.applicants || details.applicants.length === 0) {
+
+        appList.innerHTML = "<p>No applicants</p>"
+    } else {
+        details.applicants.forEach((app, index )=> {
+            const status = app.status.toLowerCase()
            appList.innerHTML += 
-           ` <div>
-           <h4>Applicant name</h4>
+         ` <div>
+             <h4>Applicant name</h4>
              <p>${app.name} </p>
-             <h4>Application status</h4>
+            
+            <h4>Application status</h4>
             <select id="applicant-status">
              <option value="select">Select</option>
-             <option value="app-received" ${app.status === "App-received" ? "selected": ""}>Application Received</option>
-             <option value="screening" ${app.status === "Screening" ? "selected": ""}>Screening</option>
-             <option value="approved" ${app.status === "Approved" ? "selected": ""}>Approved</option>
-             <option value="denied"   ${app.status === "Denied" ? "select": ""}>Denied</option>
-             <option value="withdrew" ${app.status === "Withdrew" ? "select": ""}>Withdrew</option>
-            </select>
-        
-             </div>`
+             <option value="application-received" ${status === "application-received" ? "selected": ""}>Application Received</option>
+             <option value="screening" ${status === "screening" ? "selected": ""}>Screening</option>
+             <option value="approved" ${status === "approved" ? "selected": ""}>Approved</option>
+             <option value="denied"   ${status === "denied" ? "selected": ""}>Denied</option>
+             <option value="withdrew" ${status === "withdrew" ? "selected": ""}>Withdrew</option>
+            </select> <br>
+            <button  class="remove-btn" id="remove-btn" onclick="removeApplicants(${index})">Remove</button>
+        </div>`
         })
       }
       
     }
+       function removeApplicants(index){
+        details.applicants.splice(index, 1);
+        displayApplicants(details)
+       }
 
+
+    const addBtn = document.getElementById("add-btn")
+        addBtn.addEventListener("click", function() {
+        displayAppForm()
+
+    })
+
+
+    const appForm = document.getElementById("applicant-form")
+    function displayAppForm() {
+        appForm.style.display = "block"
+    }
     
+    const nameInput = document.getElementById("applicant-name")
+    const statusInput = document.getElementById("new-app-status")
+    const confirmBtn = document.getElementById("confirm-add")
+
+    confirmBtn.addEventListener("click", function() {
+ 
+        const name = nameInput.value
+        const status = statusInput.value
+
+      if(!details.applicants) {
+        details.applicants = []
+       } 
+         
+       details.applicants.push({
+            name: name,
+            status: statusInput.value
+        })
+     console.log(status)
+     
+      displayApplicants(details)
+
+    console.log(status)
+      nameInput.value = ""
+      statusInput.value = ""
+    }) 
+
+   

@@ -15,27 +15,39 @@
     </header>
 
     <div id="unit-details" class="unit-details">
-        <h3>Unit Details</h3>
+        <h3>Unit Summary</h3>
         <!--Unit info -->
     </div>
-
+         
+        <!--- Applicant Section -->
     <div class="applicant" id="applicant">
-        <h3>Applicant Section</h3>
+                <h3>Applicant Summary</h3>
         
 
-        <div id="applicant-list"></div>
+               <div id="applicant-list">
 
-         <button class="add-btn" id="add-btn">Add</button>
+               </div>
+                <div class="action-btn" id="action-btn">
+                    <button class="add-btn" id="add-btn">Add</button>
+                    
+                </div>     
 
-        <!--<input type="text" id="applicant-name" placeholder="Applicant name">
-        <div class="action-btn" id="action-btn">
-        <button class="remove-btn" id="remove-btn">Remove</button> -->
-
+        <div id="applicant-form" style="display: none;"> 
+                <input type="text" id="applicant-name" placeholder="Applicant name">
+                
+            <select id="new-app-status">
+                <option value="select">Select</option>
+                <option value="application-received">Application Received</option>
+                <option value="screening">Screening</option>
+                <option value="approved">Approved</option>
+                <option value="denied">Denied</option>
+                <option value="withdrew">Withdrew</option>
+            </select>
+               <button class="confirm-add" id="confirm-add">Add</button>
         </div>
 
-        
-     
-    </div>
+               
+    </div> 
 
     <div class="notes" id ="notes">
         <h3>Notes</h3>
@@ -44,6 +56,8 @@
     </div>
 
     <div id="notes-saved"></div>
+
+    <button id="save-btn" class="save-btn">Save Changes</button>
 
 <script src="units.js"></script>
 </body>

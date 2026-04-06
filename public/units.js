@@ -11,6 +11,12 @@ async function getDetails() {
     try{
         const response = await fetch(`http://localhost:5050/api/units/${id}`)
         details = await response.json()
+
+        const savedChanges = localStorage.getItem("applicants-" + id)
+             if(savedChanges) {
+               details.applicants = JSON.parse(savedChanges)
+             }
+
         displayDetails(details)
         displayApplicants(details)
            
@@ -73,7 +79,7 @@ async function getDetails() {
 
     /* rendering notes from localStorage*/
     const savedNotes = localStorage.getItem("notes")
-       if ( savedNotes) {
+       if(savedNotes) {
         notes = JSON.parse(savedNotes)
        }
     displayNotes()
@@ -93,7 +99,6 @@ async function getDetails() {
          ` <div>
              <h4>Applicant name</h4>
              <p>${app.name} </p>
-            
             <h4>Application status</h4>
             <select id="applicant-status">
              <option value="select">Select</option>
@@ -103,7 +108,7 @@ async function getDetails() {
              <option value="denied"   ${status === "denied" ? "selected": ""}>Denied</option>
              <option value="withdrew" ${status === "withdrew" ? "selected": ""}>Withdrew</option>
             </select> <br>
-            <button  class="remove-btn" id="remove-btn" onclick="removeApplicants(${index})">Remove</button>
+               <button  class="remove-btn" id="remove-btn" onclick="removeApplicants(${index})">Remove</button>       
         </div>`
         })
       }
@@ -153,4 +158,17 @@ async function getDetails() {
       statusInput.value = ""
     }) 
 
-   
+     const saveBtn = document.getElementById("save-btn")
+
+     saveBtn.addEventListener("click", function(){
+        localStorage.setItem("applicants-" + id, JSON.stringify(details.applicants))
+console.log(saveBtn)
+
+       displayApplicants(details)
+console.log(details)
+     })
+
+        
+                
+            displayApplicants(details)
+

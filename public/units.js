@@ -67,14 +67,14 @@ async function getDetails() {
        
         appList.innerHTML = `
          
-              <h3 class="app-name">Applicants</h3>
+           
              
           `
         details.applicants.forEach((app, index )=> {
             const status = app.status.toLowerCase()
            appList.innerHTML +=  ` 
           <div class="app-row-status">
-            <h4>Name</h4>
+         <h5 class="app-name">Name</h5>
              <span>${app.name} </span>
              <button  class="remove-btn" id="remove-btn" onclick="removeApplicants(${index})">Remove Applicant</button>
             <h5>Status</h5>

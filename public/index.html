@@ -9,16 +9,21 @@
  <body>
     
     <header>
-      <h1>Lease-Up Dashboard</h1>
+       <div class="h1">
+        <h1>Lease-Up Dashboard</h1>
+        <p class="company-title">Clear Management LLC</p>
+        </div>
+
+        <div id="search-bar" class="search-bar">
+        <input type="text" id="search-input" placeholder=" unit number....">
+        <button class="search-btn" id="search-btn"> Search</button>
+      </div>
+
     </header>
   <main>
     <section class="container">
-      <div id="searchbar" class="searchbar">
-        <input type="text" id="search-input" placeholder=" unit number....">
-        <button class="search-btn" id="search-btn"> Search</button>
-       
-      </div>
-        <div id="unitstatus" class="unitstatus">
+
+        <div id="filter-status" class="filter-status">
             <button class="button" id="all"> All</button>
             <button class="button" id="leased"> Leased</button>
             <button class="button" id="vacant"> Vacant</button>

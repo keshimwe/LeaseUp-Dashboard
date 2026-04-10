@@ -30,61 +30,32 @@ async function getDetails() {
     const unitDetails = document.getElementById("unit-details")
 
       function displayDetails(unit){
-       unitDetails.innerHTML += `<div class="details-card"> 
-       <p>Unit: ${unit.unitNumber}</p>
-       <p>Floor: ${unit.floorPlan} </p>
-       <p>SF:    ${unit.sf}</p>
-       <p>Rent:  ${unit.rent}</p>
-       <h3>Occupancy Summary</h3>
-       <p>Status: ${unit.status}</p>
-       <p>Resident: ${unit.resident}</p>
-       <p>Lease Start: ${unit.leaseStart}</p>
-       <p>Lease End:   ${unit.leaseEnd}</p>
+       unitDetails.innerHTML += 
+  `<div class="summary"> 
+       
+      <div class="units-value">
+         <h3 class="unit-smry">Unit Summary</h3>
+       <div class="units-info">
+         <p>Unit: ${unit.unitNumber}</p>
+         <p>Floor: ${unit.floorPlan} </p>
+         <p>SF:    ${unit.sf}</p>
+         <p>Rent:  ${unit.rent}</p>
        </div>
-       `
+      </div>
+    
+      <div class="unit-values">
+          <h3 class="occupancy-smry">Occupancy Summary</h3>
+        <div class="unit-info">
+          <p>Resident: ${unit.resident}</p>
+          <p>Status: ${unit.status}</p>
+          <p>Lease Start: ${unit.leaseStart}</p>
+          <p>Lease End:   ${unit.leaseEnd}</p>
+       </div>
+      </div>
+   </div> `
     }
 
   
-    let notes = {}
-     
-    const notesArea = document.getElementById("note-input")
-     console.log(notesArea.value,"hey")
-
-     /* click function to push unit notes*/
-    const noteButton = document.getElementById("note-submit")
-    noteButton.addEventListener("click", function() {
-       const comment = notesArea.value
-      if (!notes[id]) {
-        notes[id] = []
-      }
-       notes[id].push(comment)
-
-       localStorage.setItem("notes", JSON.stringify(notes))
-       
-       displayNotes()
-       notesArea.value = ""   
-    })
-
-    /* render function for notes*/
-    function displayNotes(){
-        const savedNotes = document.getElementById("notes-saved")
-        savedNotes.innerHTML = ""
-      const unitNotes = notes[id] || []
-        unitNotes.forEach(notes =>{
-            savedNotes.innerHTML += 
-            ` <p>${notes}</p>`
-
-        })
-    }
-
-    /* rendering notes from localStorage*/
-    const savedNotes = localStorage.getItem("notes")
-       if(savedNotes) {
-        notes = JSON.parse(savedNotes)
-       }
-    displayNotes()
-
-    
     function displayApplicants(details) {
         const appList = document.getElementById("applicant-list")
         appList.innerHTML = ""
@@ -93,13 +64,20 @@ async function getDetails() {
 
         appList.innerHTML = "<p>No applicants</p>"
     } else {
+       
+        appList.innerHTML = `
+         
+              <h3 class="app-name">Applicants</h3>
+             
+          `
         details.applicants.forEach((app, index )=> {
             const status = app.status.toLowerCase()
-           appList.innerHTML += 
-         ` <div>
-             <h4>Applicant name</h4>
-             <p>${app.name} </p>
-            <h4>Application status</h4>
+           appList.innerHTML +=  ` 
+          <div class="app-row-status">
+            <h4>Name</h4>
+             <span>${app.name} </span>
+             <button  class="remove-btn" id="remove-btn" onclick="removeApplicants(${index})">Remove Applicant</button>
+            <h5>Status</h5>
             <select id="applicant-status">
              <option value="select">Select</option>
              <option value="application-received" ${status === "application-received" ? "selected": ""}>Application Received</option>
@@ -107,9 +85,15 @@ async function getDetails() {
              <option value="approved" ${status === "approved" ? "selected": ""}>Approved</option>
              <option value="denied"   ${status === "denied" ? "selected": ""}>Denied</option>
              <option value="withdrew" ${status === "withdrew" ? "selected": ""}>Withdrew</option>
+
             </select> <br>
-               <button  class="remove-btn" id="remove-btn" onclick="removeApplicants(${index})">Remove</button>       
-        </div>`
+
+            
+          </div>
+                 
+                    
+              
+                `
         })
       }
       
@@ -156,7 +140,48 @@ async function getDetails() {
     console.log(status)
       nameInput.value = ""
       statusInput.value = ""
+      document.getElementById("applicant-form").style.display="none"
     }) 
+
+    let notes = {}
+     
+    const notesArea = document.getElementById("note-input")
+     console.log(notesArea.value,"hey")
+
+     /* click function to push unit notes*/
+    const noteButton = document.getElementById("note-submit")
+    noteButton.addEventListener("click", function() {
+       const comment = notesArea.value
+      if (!notes[id]) {
+        notes[id] = []
+      }
+       notes[id].push(comment)
+
+       localStorage.setItem("notes", JSON.stringify(notes))
+       
+       displayNotes()
+       notesArea.value = ""   
+    })
+
+    /* render function for notes*/
+    function displayNotes(){
+        const savedNotes = document.getElementById("notes-saved")
+        savedNotes.innerHTML = ""
+      const unitNotes = notes[id] || []
+        unitNotes.forEach(notes =>{
+            savedNotes.innerHTML += 
+            ` <p class="notes-saved">${notes}</p>`
+
+        })
+    }
+
+    /* rendering notes from localStorage*/
+    const savedNotes = localStorage.getItem("notes")
+       if(savedNotes) {
+        notes = JSON.parse(savedNotes)
+       }
+    displayNotes()
+
 
      const saveBtn = document.getElementById("save-btn")
 

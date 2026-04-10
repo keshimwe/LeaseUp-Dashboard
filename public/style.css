@@ -2,85 +2,94 @@
      box-sizing: border-box;
 }
 
-/*body{
-
- 
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
 }
+
 header{
 
+border: 1px solid rgb(85, 83, 83);
+border-radius: 8px;
+padding: 5px;
 }
 
-
-
-main{
-
-}*/
-
-nav a{
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
+h1 {
+margin-bottom: 0;
+background-color: rgb(152, 116, 177);
+color: white;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.company-title {  
+margin-top: 0;
+background-color: rgb(152, 116, 177);
+color: white;
 }
 
-.searchbar{
-     border: 1px solid rgb(199, 196, 196);
-     text-align: center;
-     padding: 5px;
+.search-bar, h1, .company-title{
+   padding: 8px 10px;
+   text-align: center;    
 }
-
-
 
 /*unit status buttons all leased vacant notice*/
-.unitstatus{
+.filter-status{
     display: flex;   
 }
 
 .button {
     flex: 1;
     text-align: center;
-    /*background: #eee;*/
+    color: white;
+    background: #c5c2c2;
     padding: 8px;
-    /*cursor: pointer;*/
+    border: 1px solid rgb(85, 83, 83);
+    border-radius: 8px; 
 }
 
+.button:hover {
+    background-color: rgb(37, 36, 36);
 
+}
+
+.button.active{
+    background-color: rgb(37, 36, 36);
+    color: white;
+}
 
 /* Dashboard header unit status edit section*/
 .dashboard-header{
     display: flex;
-   border: 1px solid rgb(199, 196, 196);
-   
+  
 }
 
 table{
     width: 100%;
-    border-collapse: collapse;
+ 
 }
 
 th, td {
-    padding: 10px;
+    padding: 10px; 
 }
+
+
 .unit, .status, .edit {
     flex: 1;
     text-align: center;
-     padding: 8px;
+    padding: 8px 10px;
+    gap: 60px;
+    background-color: #c5c2c2;
+    color: white;
+     border: 1px solid rgb(85, 83, 83); 
+   border-radius: 8px; 
+   
 }
-
-
 
 /*dashboard actual dashboard section*/
 #unit-dashboard{
     display: flex;
     flex-direction: column;
-
-   padding: 8px;
-   border: 1px solid rgb(199, 196, 196);
+    padding: 8px;
+    border: 1px solid rgb(85, 83, 83);
 }
 
 .unit-row {
@@ -88,8 +97,196 @@ th, td {
  
 }
 
-.unit-row td{
+.unit-row, td{
     flex: 1;
     text-align: center;
+    padding: 20px;
+     gap: 10px;
     
+}
+
+.unit-row, .unit-nmbr {
+    background-color: rgb(37, 36, 36);
+    color: white;
+}
+
+.leased {
+    background-color: #08a0a5;
+    
+}
+
+.vacant {
+    background-color: rgb(178, 217, 243);
+}
+
+.notice {
+    background-color: rgb(109, 121, 160);
+}
+
+.view-edit {
+    background-color: #c5c2c2;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (min-width: 760px) {
+    header {
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+    }
+}
+
+/* Unit Details Page*/
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+     background-color: rgb(37, 36, 36);
+    color: white;
+   
+}
+
+
+.units-value {
+   
+   border: 1px solid rgb(85, 83, 83);
+   border-radius: 8px;
+   padding: 8px;
+}
+
+.unit-info, .units-info{
+     display: flex;
+  justify-content: space-around;
+    padding: 8px;
+   margin-bottom: 20px;
+}
+
+
+
+.unit-values{
+   border: 1px solid rgb(85, 83, 83);
+   border-radius: 8px;
+   padding: 8px; 
+   
+}
+
+.applicant-section {
+ border: 1px solid rgb(85, 83, 83);
+ border-radius: 8px;
+ padding: 8px;
+ display: flex;
+ justify-content: space-between;
+ 
+ 
+}
+
+.name-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.applicant-form{
+   background-color: rgb(37, 36, 36);
+    color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  padding: 8px;
+}
+
+.text {
+    display: flex;
+    width: 150px;
+}
+
+.confirm-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.applicant-list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+ 
+}
+
+.app-row {
+margin-bottom: 0;
+}
+
+.app-row-status {
+margin-top: 0;
+}
+
+.remove-btn {
+  display: flex;
+  margin-top: 30px;
+ 
+}
+
+.notes-container {
+   display: flex;
+   flex-direction: column;
+   border: 1px solid rgb(85, 83, 83);
+   border-radius: 8px;
+   padding: 8px;
+   background-color: rgb(37, 36, 36);
+    color: white;
+}
+
+.notes-action {
+  
+}
+
+
+.note-input {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.notes-saved { 
+   
+   font-size: 16px;
+}
+
+.save-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+@media (min-width: 760px) {
+  
+.notes-container {
+   flex-direction: column;
+}
+
+.notes-action {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-saved {
+ flex: 1;
+}
+
 }

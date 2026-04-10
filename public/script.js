@@ -26,18 +26,21 @@ const dashboardElement = document.getElementById("unit-dashboard")
  dashboardElement.innerHTML = "";
    unitList.forEach(unit => {
 dashboardElement.innerHTML += `<tr class="unit-row"> 
-<td>${unit.unitNumber}</td>
-<td>${unit.status}</td>
-<td><a href="/units.html?id=${unit.id}"> View/Edit </a> </td> </tr>`
+<td class="unit-nmbr">${unit.unitNumber}</td>
+<td class="${unit.status.toLowerCase()}">${unit.status}</td>
+<td class="view-edit"><a href="/units.html?id=${unit.id}"> View/Edit </a> </td> </tr>`
 });
  }
   
  /*Status button */
-  const statusButton = document.querySelectorAll("#unitstatus button")
+  const statusButton = document.querySelectorAll("#filter-status button")
   console.log(statusButton)
 
    statusButton.forEach(button => {
      button.addEventListener("click", function()   {
+
+      statusButton.forEach(button => button.classList.remove("active"))
+      button.classList.add("active")
       
       const status = button.id;
       console.log("clicked", status);

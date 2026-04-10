@@ -15,26 +15,29 @@
     </header>
 
     <div id="unit-details" class="unit-details">
-        <h3>Unit Summary</h3>
+       
         <!--Unit info -->
     </div>
          
         <!--- Applicant Section -->
-    <div class="applicant" id="applicant">
-                <h3>Applicant Summary</h3>
-        
+    <div class="applicant-section" id="applicant-section">
+              <h3>Applicant Summary</h3>
+              
+              
+               <div id="applicant-list" class="applicant-list"></div>
 
-               <div id="applicant-list">
-
-               </div>
                 <div class="action-btn" id="action-btn">
-                    <button class="add-btn" id="add-btn">Add</button>
+                    <h3>Action</h3><br>
                     
-                </div>     
-
-        <div id="applicant-form" style="display: none;"> 
-                <input type="text" id="applicant-name" placeholder="Applicant name">
+                    <button class="add-btn" id="add-btn">Add Applicant</button><br>
+                    <button class="edit-btn">Edit</button>
+                </div> 
+     
+        <div id="applicant-form" class="applicant-form" style="display: none;"> 
+                  <span>Enter Name</span>
+                <input class="text" type="text" id="applicant-name" placeholder="Applicant name">  <br>
                 
+                <span>Select Status</span><br>
             <select id="new-app-status">
                 <option value="select">Select</option>
                 <option value="application-received">Application Received</option>
@@ -43,21 +46,28 @@
                 <option value="denied">Denied</option>
                 <option value="withdrew">Withdrew</option>
             </select>
-               <button class="confirm-add" id="confirm-add">Add</button>
+               <div class="confirm-btn">
+                 <button class="confirm-add" id="confirm-add">Add</button>      
+                </div>
         </div>
-
-               
-    </div> 
-
-    <div class="notes" id ="notes">
-        <h3>Notes</h3>
-        <textarea class="note-input" id="note-input" ></textarea><br>
-        <button class="note-submit" id="note-submit">Submit</button>
     </div>
+      
+            
+        <div class="notes-container" id ="notes">
+            <div class ="notes-action">
+                <h3>Notes</h3><br>
+          
+                <textarea class="note-input" id="note-input" ></textarea><br>
+                <button class="note-submit" id="note-submit">Submit</button>
+            </div>
+        
 
-    <div id="notes-saved"></div>
-
-    <button id="save-btn" class="save-btn">Save Changes</button>
+           <div id="notes-saved"></div>
+        </div>
+   
+          <div class="save-btn">
+            <button id="save-btn" class="save-btn">Save Changes</button>
+          </div>
 
 <script src="units.js"></script>
 </body>
